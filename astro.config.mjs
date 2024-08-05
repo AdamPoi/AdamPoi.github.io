@@ -51,6 +51,6 @@ export default defineConfig({
     outDir: './docs',
     build: {
         assets: 'assets',
-
+        assetsPrefix: 'https://adampoi.github.io',
     },
 })
