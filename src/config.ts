@@ -8,6 +8,7 @@ export const SITE: Site = {
     description:
         "Adam Rafi Rezandi Personal Website. A place where I share my thoughts, projects, and experiences.",
     shortDescription: "",
+    base: "/docs",
 };
 
 export const NavigationLinks: NavigationLink[] = [

@@ -10,6 +10,7 @@ import { uploadAssetsToS3 } from './src/support/uploader.ts'
 
 export default defineConfig({
     site: SITE.url,
+    base: SITE.base,
     image: {
         // If you prefer not to optimize images during the BUILD,
         // you can open this comment, It will greatly reduce the build time.
