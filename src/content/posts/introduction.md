@@ -5,6 +5,7 @@ pubDate: "2024-08-05 15:42:01"
 category: "life"
 banner: "@images/banners/introduction.png"
 tags: ["life"]
+selected: true
 ---
 
 Hello, I'm **Adam Rafi Rezandi**, a software engineer from Indonesia. I'm passionate about software development field and always eager to learn new things.

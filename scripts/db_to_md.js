@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 class BlogToMarkdown {
-    databaseName = 'godruoyi'
+    databaseName = 'adampoi'
 
     host = '127.0.0.1'
 

@@ -11,9 +11,10 @@ export const SITE: Site = {
 };
 
 export const NavigationLinks: NavigationLink[] = [
+    { name: "Home", url: "/" },
     { name: "Projects", url: "/projects" },
     { name: "Posts", url: "/posts" },
-    { name: "Category", url: "/categories" },
+    // { name: "Category", url: "/categories" },
 ];
 
 export const FooterLinks = [
