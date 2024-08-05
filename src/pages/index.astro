@@ -5,62 +5,23 @@ import HeroSection from '@components/ui/sections/HeroSection.astro';
 import AboutSection from '@/components/ui/sections/AboutSection.astro';
 import EducationSection from '@/components/ui/sections/EducationSection.astro';
 import ExperienceSection from '@/components/ui/sections/ExperienceSection.astro';
-import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
-import ProjectInsight from '@/components/project/ProjectInsight.astro';
-import Icon from '@/components/ui/icons/icon.astro';
-
-const projects: CollectionEntry<'projects'>[] = (
-    await getCollection('projects')
-)
-    .sort(
-        (a: CollectionEntry<'projects'>, b: CollectionEntry<'projects'>) =>
-            b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-    )
-    .slice(0, 3);
+import ProjectSection from '@/components/ui/sections/ProjectSection.astro';
+import FeaturesSection from '@/components/ui/sections/FeaturesSection.astro';
 ---
 
 <BaseLayout>
     <HeroSection
         title=`<span class="hover:text-orange-400">ADAM RAFI REZANDI</span>`
         subTitle=`A software engineer who loves exploring new technologies and building cool stuff`
-        primaryBtnURL="/posts"
+        primaryBtn="Get In Touch"
+        primaryBtnURL="mailto:isadamrr@gmail.com"
         src={blogHeroImg}
         alt="Adam Rafi Rezandi Portfolio"
     />
 
     <AboutSection />
+    <FeaturesSection />
     <EducationSection />
     <ExperienceSection />
-    <section
-        class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-8 2xl:max-w-full"
-    >
-        <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-            <h2
-                class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
-            >
-                Latest Project
-            </h2>
-            <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
-                Always want to build something cool and useful
-            </p>
-        </div>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((b) => <ProjectInsight project={b} />)}
-        </div>
-        <div class="text-center mt-6">
-            <a
-                href="/projects"
-                class="group inline-flex items-center justify-center gap-x-2 rounded-full px-4 py-3 text-sm font-bold text-neutral-50 ring-zinc-500 transition duration-300 focus-visible:ring outline-none border border-transparent bg-orange-400 hover:bg-orange-500 active:bg-orange-500 dark:focus:outline-none disabled:pointer-events-none disabled:opacity-50 2xl:text-base dark:ring-zinc-200"
-            >
-                <div class="flex items-center gap-x-2">
-                    <p>See all my projects?</p>Go here
-                    <Icon
-                        name="arrowRight"
-                        class="h-4 w-4 flex-shrink-0 transition duration-300 group-hover:translate-x-1"
-                    />
-                </div>
-            </a>
-        </div>
-    </section>
+    <ProjectSection />
 </BaseLayout>
