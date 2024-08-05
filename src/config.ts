@@ -2,11 +2,11 @@ import { isProd } from "./support/envs.ts";
 import type { NavigationLink, Site } from "./types.ts";
 
 export const SITE: Site = {
-    author: "Godruoyi",
-    url: "https://godruoyi.com",
-    title: "连波的闲谈杂鱼",
+    author: "Adam Rafi Rezandi",
+    url: "https://adampoi.github.io",
+    title: "Adam Rafi Rezandi",
     description:
-        "Godruoyi's personal blog, I enjoy the process of building something using any technology stack",
+        "Adam Rafi Rezandi Personal Website. A place where I share my thoughts, projects, and experiences.",
     shortDescription: "",
 };
 
@@ -18,20 +18,13 @@ export const NavigationLinks: NavigationLink[] = [
 
 export const FooterLinks = [
     {
-        section: "Blog",
+        section: "Contact Me",
         links: [
-            { name: "Posts", url: "/posts" },
-            { name: "Timeline", url: "/timeline" },
-            { name: "Categories", url: "/categories" },
-            { name: "About Me", url: "/posts/about-godruoyi" },
-        ],
-    },
-    {
-        section: "Other",
-        links: [
-            { name: "RSS", url: "/rss.xml" },
-            { name: "Site Map", url: "/sitemap-index.xml" },
-            { name: "Twitter", url: "https://x.com/godruoyi" },
+            { name: "Email", url: "mailto:isadamrr@gmail.com" },
+            {
+                name: "Linkedin",
+                url: "https://www.linkedin.com/in/adam-rafi-rezandi/",
+            },
         ],
     },
 ];
