@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import LeftSection from '../project copy/blocks/LeftSection.astro';
+import RightSection from '../project copy/blocks/RightSection.astro';
+import ProjectInsight from './ProjectInsight.astro';
+
+const projects = await getCollection('projects');
+---
+
+{
+    (
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 py-8">
+            {projects.map((b) => (
+                <ProjectInsight project={b} />
+            ))}
+        </div>
+    )
+}
