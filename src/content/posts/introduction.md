@@ -3,7 +3,7 @@ title: "Introduction"
 description: "A brief introduction of me"
 pubDate: "2024-08-05 15:42:01"
 category: "life"
-banner: "@images/banners/pysRbXAo7Ag6uh9grFDfUq7yktlfAHbBg9U4B7zA.png"
+banner: "@images/banners/introduction.png"
 tags: ["life"]
 ---
 
