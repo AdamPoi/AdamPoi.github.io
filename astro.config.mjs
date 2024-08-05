@@ -48,7 +48,6 @@ export default defineConfig({
     },
     prefetch: true,
     output: 'static',
-    outDir: '/docs',
     build: {
         assets: 'assets',
         assetsPrefix: 'https://adampoi.github.io',
