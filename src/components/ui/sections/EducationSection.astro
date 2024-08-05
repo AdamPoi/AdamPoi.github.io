@@ -1,0 +1,91 @@
+---
+import polinemaLogo from '@images/logos/polinema-logo.png';
+import smkn4Logo from '@images/logos/smkn4-logo.png';
+import Image from '@components/ui/images/Image.astro';
+---
+
+<section
+    class="mx-auto max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 lg:py-4 2xl:max-w-full"
+>
+    <h2
+        class="text-xl text-center mb-8 font-bold text-neutral-700 hover:text-orange-400 dark:hover:text-orange-400 dark:text-neutral-200 md:text-3xl md:leading-tight"
+    >
+        Education
+    </h2>
+    <div
+        class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24"
+    >
+        <div class="max-w-5xl px-4 sm:px-6 lg:px-8 mx-auto">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-6">
+                <a
+                    class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:group"
+                    href="#"
+                >
+                    <div class="p-4 md:p-5">
+                        <div class="flex">
+                            <Image
+                                src={polinemaLogo}
+                                alt="State Polytechnic Of Malang"
+                                {...Astro.props}
+                                draggable="false"
+                                loading="eager"
+                                class="w-24 h-24"
+                            />
+                            <div class="grow ms-5">
+                                <h3
+                                    class="block text-lg font-bold text-neutral-700 group-hover:text-orange-400 dark:text-neutral-300 dark:group-hover:text-orange-300"
+                                >
+                                    State Polytechnic Of Malang
+                                </h3>
+                                <span
+                                    class="block text-neutral-600 group-hover:text-neutral-700 dark:text-neutral-300"
+                                    >Diploma in Informatics Engineering
+                                </span>
+                                <span
+                                    class="mt-2 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400"
+                                >
+                                    July 2021 - July 2025(expected)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a
+                    class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:group"
+                    href="#"
+                >
+                    <div class="p-4 md:p-5">
+                        <div class="flex">
+                            <Image
+                                src={smkn4Logo}
+                                alt="SMKN 4 Malang"
+                                {...Astro.props}
+                                disableBlur={true}
+                                draggable="false"
+                                loading="eager"
+                                class="w-24 h-24"
+                            />
+                            <div class="grow ms-5">
+                                <h3
+                                    class="block text-lg font-bold text-neutral-700 group-hover:text-orange-400 dark:text-neutral-300 dark:group-hover:text-orange-300"
+                                >
+                                    SMKN 4 Malang
+                                </h3>
+                                <span
+                                    class="block text-neutral-600 group-hover:text-neutral-700 dark:text-neutral-300"
+                                    >Majoring in Software Engineering
+                                </span>
+                                <span
+                                    class="mt-2 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400"
+                                >
+                                    July 2018 - July 2021
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

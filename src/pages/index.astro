@@ -1,17 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 import blogHeroImg from '@images/hero-landing.png';
 import HeroSection from '@components/ui/sections/HeroSection.astro';
 import AboutSection from '@/components/ui/sections/AboutSection.astro';
-
-const posts: CollectionEntry<'posts'>[] = (await getCollection('posts'))
-    .sort(
-        (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) =>
-            b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-    )
-    .slice(0, 3);
+import EducationSection from '@/components/ui/sections/EducationSection.astro';
+import ExperienceSection from '@/components/ui/sections/ExperienceSection.astro';
 ---
 
 <BaseLayout>
@@ -20,14 +13,10 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts'))
         subTitle=`A software engineer who loves exploring new technologies and building cool stuff`
         primaryBtnURL="/posts"
         src={blogHeroImg}
-        alt="godruoyi's blog"
+        alt="Adam Rafi Rezandi Portfolio"
     />
 
     <AboutSection />
-
-    <!-- <HeroSectionAlt
-        title="Fellow me on GitHub"
-        subTitle="I love open source and have some small tools on my GitHub. You can get me more by checking out my code"
-        url="https://github.com/godruoyi"
-    /> -->
+    <EducationSection />
+    <ExperienceSection />
 </BaseLayout>
