@@ -1,7 +1,7 @@
 ---
 title: "MyKTP"
 description: "A KTP OCR Detection Application"
-pubDate: "2023-10-1 00:00:00"
+pubDate: "2023-10-01 00:00:00"
 category: "project"
 banner: "@images/projects/cover/myktp-cover.png"
 tags: ["python", "flutter", "opencv"]

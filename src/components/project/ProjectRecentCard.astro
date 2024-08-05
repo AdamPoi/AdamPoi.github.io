@@ -1,10 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import LeftSection from '../project copy/blocks/LeftSection.astro';
-import RightSection from '../project copy/blocks/RightSection.astro';
 import ProjectInsight from './ProjectInsight.astro';
 
 const projects = await getCollection('projects');
+projects.sort(
+    (a, b) =>
+        new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
 ---
 
 {
