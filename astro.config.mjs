@@ -6,7 +6,6 @@ import sitemap from '@astrojs/sitemap'
 import partytown from '@astrojs/partytown'
 import { SITE } from './src/config.ts'
 import { remarkReadingTime } from './src/support/plugins.ts'
-import { uploadAssetsToS3 } from './src/support/uploader.ts'
 
 export default defineConfig({
     site: SITE.url,
@@ -49,8 +48,9 @@ export default defineConfig({
     },
     prefetch: true,
     output: 'static',
+    outDir: './docs',
     build: {
         assets: 'assets',
-        assetsPrefix: 'https://images.adampoi.github.io',
+
     },
 })
